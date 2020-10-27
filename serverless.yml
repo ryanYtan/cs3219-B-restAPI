@@ -9,10 +9,8 @@ provider:
   timeout: 15
 
 functions:
-  api:
-    handler: lambda.handler #consider changing to index.handler since it is our entry point
+  app:
+    handler: ./index.handler
     events:
-      - http: ANY {proxy+}
       - http: ANY /
-    environment:
-      DB_SOURCE: 'atlas'
+      - http: ANY {proxy+}
