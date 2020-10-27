@@ -1,9 +1,10 @@
 service: cs3219-taskB
+
 provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  region: us-east-1
+  region: ap-southeast-1
   memorySize: 128
   timeout: 15
 
