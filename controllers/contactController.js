@@ -24,7 +24,6 @@ exports.new = (req, res) => {
     contact.email = req.body.email;
     contact.phone = req.body.phone;
     contact.address = req.body.address;
-    console.log("to save");
     contact.save((err) => {
         if (err) {
             res.json(err);
