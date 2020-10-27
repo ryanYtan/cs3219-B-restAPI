@@ -1,6 +1,7 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import app from '../index';
+import chai from "chai";
+import chaiHttp from "chai-http";
+import app from "../index";
+import dummy_person from "./dummy/dummy_person";
 
 let time_out = 10000;
 
@@ -10,10 +11,10 @@ chai.should();
 describe("GET /", () => {
     it("Retrieves index", (done) => {
         chai.request(app)
-            .get('/')
+            .get("/")
             .end((err, res) => {
                 res.should.have.status(200);
-                res.body.should.be.a('object');
+                res.body.should.be.a("object");
                 done();
             });
     }).timeout(time_out);
@@ -22,11 +23,37 @@ describe("GET /", () => {
 describe("GET /api/contacts", () => {
     it("Returns all contacts", (done) => {
         chai.request(app)
-            .get('/api/contacts')
+            .get("/api/contacts")
             .end((err, res) => {
                 res.should.have.status(200);
-                res.body.should.be.a('object');
+                res.body.should.be.a("object");
                 done();
             });
+    }).timeout(time_out);
+});
+
+describe("POST /api/contacts", () => {
+    it("Inserts a contact", (done) => {
+        chai.request(app)
+            .post("/api/contacts")
+            .set('content-type', 'application/x-www-form-urlencoded')
+            .send(dummy_person)
+            .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a("object");
+                done();
+            })
+    }).timeout(time_out);
+
+    it("Insert a blank contact", (done) => {
+        chai.request(app)
+            .post("/api/contacts")
+            .set('content-type', 'application/x-www-form-urlencoded')
+            .send({}) // empty
+            .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a("object");
+                done();
+            })
     }).timeout(time_out);
 });
