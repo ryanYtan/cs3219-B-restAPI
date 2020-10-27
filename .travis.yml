@@ -10,6 +10,9 @@ cache:
 script:
   - npm test
 
+services:
+  - mongodb
+
 deploy:
   provider: lambda
   function_name: "cs3219-taskB-dev-api"
