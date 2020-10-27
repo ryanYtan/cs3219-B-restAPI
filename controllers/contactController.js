@@ -24,6 +24,7 @@ exports.new = (req, res) => {
     contact.email = req.body.email;
     contact.phone = req.body.phone;
     contact.address = req.body.address;
+    console.log("to save");
     contact.save((err) => {
         if (err) {
             res.json(err);
@@ -38,7 +39,7 @@ exports.new = (req, res) => {
 
 // Gets contact from id
 exports.view = (req, res) => {
-    Contact.findById(req.params.contact_id, function (err, contact) {
+    Contact.findById(req.params.contact_id, (err, contact) => {
         if (err)
             res.send(err);
         res.json({
@@ -50,14 +51,14 @@ exports.view = (req, res) => {
 
 // Handle update contact info
 exports.update = (req, res) => {
-    Contact.findById(req.params.contact_id, function (err, contact) {
+    Contact.findById(req.params.contact_id, (err, contact) => {
         if (err)
             res.send(err);
         contact.name = req.body.name ? req.body.name : contact.name;
         contact.email = req.body.email;
         contact.phone = req.body.phone;
         contact.address = req.body.address;
-        contact.save(function (err) {
+        contact.save((err) => {
             if (err) {
                 res.json(err);
             } else {
@@ -74,7 +75,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     Contact.remove({
         _id: req.params.contact_id
-    }, function (err, contact) {
+    }, (err, contact) => {
         if (err) {
             res.send(err);
         } else {
