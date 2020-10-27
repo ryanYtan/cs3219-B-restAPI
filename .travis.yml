@@ -1,8 +1,11 @@
 language: node_js
+
 node_js:
-    - node
+    - "stable"
+
+cache:
+  directories:
+    - node_modules
+
 script:
-  - npm install
-  - npm run test
-services:
-  - mongodb
+  - npm test
