@@ -1,9 +1,24 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
 import app from "../index";
-import dummy_person from "./dummy/dummy_person";
 
 let time_out = 10000;
+
+const dummy_person = {
+    _id: "123",
+    name: "John I'm Done",
+    email: "johnisdone@example.com",
+    phone: "12345678",
+    address: "Mariana Trench"
+}
+
+const dummy_person_edited = {
+    _id: "123",
+    name: "John I'm Done The Second",
+    email: "johnisdonethesecond@example.com",
+    phone: "87654321",
+    address: "Spur Line"
+}
 
 chai.use(chaiHttp);
 chai.should();
