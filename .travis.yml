@@ -14,3 +14,6 @@ deploy:
   role: arn:aws:iam::816057347081:role/service-role/lambda-test-role-kmdlepst
   runtime: nodejs12.x
   handler_name: handler
+  on:
+    all_branches: true
+    branch: master
