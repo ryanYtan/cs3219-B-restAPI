@@ -3,3 +3,14 @@ node_js:
   - 12.3.1
 services:
   - mongodb
+install:
+  - npm install
+  - npm install -g serverless
+
+deploy:
+  provider: lambda
+  function_name: lambda-test
+  region: ap-southeast-1
+  role: arn:aws:iam::816057347081:role/service-role/lambda-test-role-kmdlepst
+  runtime: nodejs12.x
+  handler_name: handler

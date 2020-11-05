@@ -4,13 +4,17 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "start": "nodemon indexlocal.js",
+        "remote": "nodemon index.js",
         "test": "mocha --require babel-register tests/*.js --exit"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "cors": "^2.8.5",
         "express": "^4.17.1",
-        "mongoose": "^5.10.12"
+        "mongoose": "^5.10.12",
+        "serverless-http": "^2.6.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.12.1",
