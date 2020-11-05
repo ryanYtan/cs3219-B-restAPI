@@ -9,10 +9,11 @@ install:
 
 deploy:
   provider: lambda
-  function_name: lambda-test
+  function_name: taskb3
   region: ap-southeast-1
 #  role: arn:aws:iam::816057347081:role/service-role/lambda-test-role-kmdlepst
-  role: arn:aws:lambda:ap-southeast-1:816057347081:function:taskb3
+#  role: arn:aws:lambda:ap-southeast-1:816057347081:function:taskb3
+  role: arn:aws:iam::816057347081:role/taskb3-use
   runtime: nodejs12.x
   handler_name: handler
   on:
