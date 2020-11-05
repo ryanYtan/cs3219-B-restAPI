@@ -40,6 +40,9 @@ An example Postman session for `POST` request is shown below
 ![](./images/img1.png)
 
 ## Task B2 - API Test Cases and Travis CI/CD
+The test cases are found in `$PROJECT_DIR/tests/test.js`. They can be run
+via `npm run test`.
+
 
 ## Task B3 - Automatic deployment to Serverless
 

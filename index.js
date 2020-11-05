@@ -21,3 +21,5 @@ app.get("/", (req, res) => res.send("CS3219 Task B"));
 
 app.use("/api", routes);
 app.listen(port, () => { console.log("Running on port " + port); });
+
+module.exports = app;
