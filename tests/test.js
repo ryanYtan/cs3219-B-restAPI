@@ -1,6 +1,6 @@
 import chai, { assert } from 'chai';
 import chaiHttp from 'chai-http';
-import app from "../index";
+import app from "../indexlocal";
 import { schema } from '../model/personModel';
 let mongoose = require("mongoose");
 let Person = require("../model/personModel");
