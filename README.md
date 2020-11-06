@@ -60,6 +60,9 @@ Below is a screenshot, line 317 and 319 are of concern to this task.
 
 ![](./images/img2.png)
 
+Unfortunately, despite my best efforts, I could not get the AWS Lambda API
+gateways to work. So... Yeah.
+
 ## Task B4
 Task B4 uses B2 as the "starting ground", and can be found in branch `task-b4`.
 Relevant instructions can be found under the README for that branch.
