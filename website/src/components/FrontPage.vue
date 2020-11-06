@@ -8,6 +8,7 @@
 
         <!-- Main Stuff -->
         <b-container>
+            {{ debug }}
             <div v-if="msg" class="my-4">
                 <b-card>
                     {{ msg }}
@@ -66,7 +67,8 @@ export default {
     data() {
         return {
             persons: [],
-            msg: ""
+            msg: "",
+            debug: ""
         };
     },
 
@@ -125,12 +127,12 @@ export default {
                     if (res.status == 200) {
                         this.msg = `Added new user ${newPerson.userName}`
                     } else {
-                        this.msg = `This user already exists`
+                        this.msg = `This user already exists`;
                     }
                 })
                 .catch((err) => {
-                    err;
-                    this.msg = `This user already exists`
+                    err
+                    this.msg = `Username in incorrect format`;
                 });
         },
 
