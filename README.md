@@ -11,7 +11,7 @@
 1. In a shell, run `mongod` and leave it running
 2. In another shell, clone the repo and `cd` into the directory
 3. Run `npm install` to install node dependencies
-4. Run `nodemon` or `node index.js` to start the server
+4. Run `node indexlocal.js` to start the server
 5. You can access the server at `localhost:8080`
 
 ## Task B1 - RESTful API
@@ -27,7 +27,7 @@ REST calls are:
 The body of a `POST` or `PUT` request should have the followed key-value pairs,
 with the `content-type` being `x-www-form-urlencoded`.
 
-```json
+```
 {
     userName:   {user_name} // alphanumeric, no spaces
     firstName:  John
