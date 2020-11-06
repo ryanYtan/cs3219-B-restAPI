@@ -61,5 +61,5 @@ Below is a screenshot, line 317 and 319 are of concern to this task.
 ![](./images/img2.png)
 
 ## Task B4
-
-\-
+Task B4 uses B2 as the "starting ground", and can be found in branch `task-b4`.
+Relevant instructions can be found under the README for that branch.
