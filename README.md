@@ -1,5 +1,7 @@
 # CS3219 Task B
 
+[![Build Status](https://travis-ci.org/ryanYtan/cs3219-B-restAPI.svg?branch=main)](https://travis-ci.org/ryanYtan/cs3219-B-restAPI)
+
 ## Pre-requisites
 * MongoDB: DBMS
 * Postman: To manually serve API requests
@@ -43,8 +45,21 @@ An example Postman session for `POST` request is shown below
 The test cases are found in `$PROJECT_DIR/tests/test.js`. They can be run
 via `npm run test`.
 
+Travis settings can be found in `.travis.yml`, and the automatic CI/CD can be
+seen from the checkmark next to the commit hash above.
 
 ## Task B3 - Automatic deployment to Serverless
+Automatic deployment to serverless (AWS Lambda) is done via Travis. The settings can be
+found in `serverless.yml`, `.travis.yml` and `index.js`. The remote database
+used is Atlas from MongoDB.
+
+This [link](https://travis-ci.org/github/ryanYtan/cs3219-B-restAPI/builds/741715559#L317)
+shows a Travis build that automatically deploys to AWS Lambda.
+
+Below is a screenshot, line 317 and 319 are of concern to this task.
+
+![](./images/img2.png)
 
 ## Task B4
--
+
+\-
